@@ -1,11 +1,11 @@
 name: 'Plant UML Github Action'
 description: 'Generates PlantUML diagrams'
 inputs:
-  args:
+  plantuml-args:
     description: 'PlantUML command arguments'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.args }}
+    - ${{ inputs.plantuml-args }}
